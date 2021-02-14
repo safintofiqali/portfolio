@@ -1,0 +1,348 @@
+// Main
+.main {
+    flex: 0 0 30%;
+    border-right: $border-3px;
+
+    @include respond($mobile) {
+        flex: 100% !important;
+        border-right: none;
+    }
+
+    @include respond($tablet) {
+        flex: 100% !important;
+        border-right: none;
+    }
+
+    &__img-box {
+        width: 100%;
+        height: 30rem;
+        border-bottom: $border-3px;
+
+        @include respond($tablet) {
+            height: 60rem;
+        }
+
+        @include respond($mobile) {
+            height: 30rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 3px;
+    }
+
+    &__info {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &__heading {
+        color: $color-myrtle-green;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+
+        &--main {
+            display: block;
+            font-weight: 500;
+            font-size: 5.5rem;
+            letter-spacing: 8px;
+
+            @include respond($ipadPro-port) {
+                font-size: 3rem;
+                letter-spacing: 2px;
+            }
+
+            @include respond($tablet) {
+                font-size: 7rem;
+            }
+
+            @include respond($mobile) {
+                font-size: 3rem;
+                letter-spacing: 4px;
+            }
+
+
+        }
+
+        &--sub {
+            color: $color-papaya-whip;
+            font-size: 2rem;
+            font-weight: 100;
+            letter-spacing: 1px;
+
+            @include respond($ipadPro-port) {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            @include respond($tablet) {
+                font-size: 2.5rem;
+            }
+
+            @include respond($mobile) {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    &__social-list {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        border-top: $border-2px;
+        padding: 1rem 0;
+    }
+
+    &__social-item {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+
+    &__social-link {
+        font-size: 2.5rem;
+        color: #fff;
+        transition: color .2s;
+
+        @include respond($ipadPro-port) {
+            font-size: 2rem;
+        }
+
+        @include respond($mobile) {
+            font-size: 2rem;
+        }
+
+        &:hover {
+            color: $color-cta
+        }
+    }
+
+
+}
+
+// Buttons
+.btn {
+    backface-visibility: hidden;
+
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        padding: 2rem 4rem;
+        border-radius: 5px;
+        border: 2px solid;
+        transition: all .2s ease;
+
+        @include respond($mobile) {
+            padding: 1rem 2rem;
+        }
+    }
+
+    &--cta {
+        color: $color-cta;
+        border-color: $color-cta;
+
+        &:hover {
+            transform: translateY(-7px);
+            background-color: $color-cta;
+            color: $color-papaya-whip
+        }
+    }
+}
+
+.toggler {
+    display: none;
+}
+
+@include respond($mobile) {
+    .toggler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        position: fixed;
+        top: 0;
+
+        border-radius: 50%;
+        z-index: 10;
+        background-color: $color-cta;
+    }
+}
+
+// Menu 
+.menu {
+    width: 100%;
+    background-color: $color-papaya-whip;
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        text-align: center;
+        flex: 0 0 20%;
+        display: inline-block;
+        text-decoration: none;
+        color: $color-gunmetal;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1rem 0;
+        transition: all .3s;
+
+        &.active {
+            background-color: $color-cta;
+        }
+
+        &:not(:last-child) {
+            border-right: 2px solid $color-gunmetal;
+        }
+
+        &:hover {
+            background-color: $color-cta;
+        }
+    }
+
+    @include respond($mobile) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(-10%);
+        z-index: 5;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+
+        &.show {
+            transform: translateY(0%);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &__nav {
+            flex-direction: column;
+        }
+
+        &__link {
+            flex: 1;
+            padding: .5rem 0;
+            font-weight: 300;
+            font-size: 1.4rem;
+            letter-spacing: 0;
+
+            &.active {
+                background-color: transparent;
+                color: $color-cta
+            }
+
+            &:not(:last-child) {
+                border-right: none;
+            }
+        }
+
+    }
+
+}
+
+// profile 
+.profile,
+.education,
+.skills,
+.experience {
+    padding: 4rem;
+    transition: all .3s;
+}
+
+.education {
+    &__major {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    &__uni {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba($color-cta, .8);
+    }
+
+    &__year {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba($color-cta, .7);
+    }
+}
+
+// Skills 
+.skills {
+
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @include respond($mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    ul {
+        margin-top: 2rem;
+        list-style: none;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.experience {
+    &__item {
+
+        &:not(:last-child) {
+            border-bottom: $border-2px;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__type {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    &__company {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba($color-cta, .8);
+    }
+
+    &__year {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba($color-cta, .7);
+    }
+}

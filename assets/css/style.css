@@ -1,0 +1,373 @@
+/* line 18, sass/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* line 24, sass/_base.scss */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+/* line 29, sass/_base.scss */
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+
+/* line 35, sass/_base.scss */
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  color: #387D7A; }
+
+/* line 42, sass/_base.scss */
+.subtitle {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  letter-spacing: 2px;
+  color: #B8E2C8; }
+
+/* line 49, sass/_base.scss */
+p {
+  font-size: 1.4;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-left: 2rem; }
+  /* line 55, sass/_base.scss */
+  p:not(:last-child) {
+    margin-bottom: 2rem; }
+
+/* line 60, sass/_base.scss */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none; }
+
+/* line 1, sass/_layout.scss */
+body {
+  background-color: #1C2735;
+  color: #FFF1D0; }
+
+/* line 6, sass/_layout.scss */
+.container {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 15, sass/_layout.scss */
+.content-box {
+  max-width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #31445E;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  overflow: hidden; }
+
+/* line 28, sass/_layout.scss */
+.categories {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+/* line 2, sass/_components.scss */
+.main {
+  flex: 0 0 30%;
+  border-right: 3px solid #31445E; }
+  @media screen and (max-width: 25.875em) {
+    /* line 2, sass/_components.scss */
+    .main {
+      flex: 100% !important;
+      border-right: none; } }
+  @media screen and (max-width: 48em) {
+    /* line 2, sass/_components.scss */
+    .main {
+      flex: 100% !important;
+      border-right: none; } }
+  /* line 16, sass/_components.scss */
+  .main__img-box {
+    width: 100%;
+    height: 30rem;
+    border-bottom: 3px solid #31445E; }
+    @media screen and (max-width: 48em) {
+      /* line 16, sass/_components.scss */
+      .main__img-box {
+        height: 60rem; } }
+    @media screen and (max-width: 25.875em) {
+      /* line 16, sass/_components.scss */
+      .main__img-box {
+        height: 30rem; } }
+  /* line 30, sass/_components.scss */
+  .main__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 3px; }
+  /* line 37, sass/_components.scss */
+  .main__info {
+    margin-top: 3rem;
+    text-align: center; }
+  /* line 42, sass/_components.scss */
+  .main__heading {
+    color: #387D7A;
+    line-height: 1.6;
+    margin-bottom: 3rem; }
+    /* line 47, sass/_components.scss */
+    .main__heading--main {
+      display: block;
+      font-weight: 500;
+      font-size: 5.5rem;
+      letter-spacing: 8px; }
+      @media screen and (max-width: 64em) {
+        /* line 47, sass/_components.scss */
+        .main__heading--main {
+          font-size: 3rem;
+          letter-spacing: 2px; } }
+      @media screen and (max-width: 48em) {
+        /* line 47, sass/_components.scss */
+        .main__heading--main {
+          font-size: 7rem; } }
+      @media screen and (max-width: 25.875em) {
+        /* line 47, sass/_components.scss */
+        .main__heading--main {
+          font-size: 3rem;
+          letter-spacing: 4px; } }
+    /* line 70, sass/_components.scss */
+    .main__heading--sub {
+      color: #FFF1D0;
+      font-size: 2rem;
+      font-weight: 100;
+      letter-spacing: 1px; }
+      @media screen and (max-width: 64em) {
+        /* line 70, sass/_components.scss */
+        .main__heading--sub {
+          font-size: 1.5rem;
+          letter-spacing: 1px; } }
+      @media screen and (max-width: 48em) {
+        /* line 70, sass/_components.scss */
+        .main__heading--sub {
+          font-size: 2.5rem; } }
+      @media screen and (max-width: 25.875em) {
+        /* line 70, sass/_components.scss */
+        .main__heading--sub {
+          font-size: 1.6rem;
+          letter-spacing: 1px; } }
+  /* line 92, sass/_components.scss */
+  .main__social-list {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #31445E;
+    padding: 1rem 0; }
+  /* line 104, sass/_components.scss */
+  .main__social-item:not(:last-child) {
+    margin-right: 1rem; }
+  /* line 110, sass/_components.scss */
+  .main__social-link {
+    font-size: 2.5rem;
+    color: #fff;
+    transition: color .2s; }
+    @media screen and (max-width: 64em) {
+      /* line 110, sass/_components.scss */
+      .main__social-link {
+        font-size: 2rem; } }
+    @media screen and (max-width: 25.875em) {
+      /* line 110, sass/_components.scss */
+      .main__social-link {
+        font-size: 2rem; } }
+    /* line 123, sass/_components.scss */
+    .main__social-link:hover {
+      color: #E44E58; }
+
+/* line 132, sass/_components.scss */
+.btn {
+  backface-visibility: hidden; }
+  /* line 135, sass/_components.scss */
+  .btn, .btn:link, .btn:visited {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    border: 2px solid;
+    transition: all .2s ease; }
+    @media screen and (max-width: 25.875em) {
+      /* line 135, sass/_components.scss */
+      .btn, .btn:link, .btn:visited {
+        padding: 1rem 2rem; } }
+  /* line 153, sass/_components.scss */
+  .btn--cta {
+    color: #E44E58;
+    border-color: #E44E58; }
+    /* line 157, sass/_components.scss */
+    .btn--cta:hover {
+      transform: translateY(-7px);
+      background-color: #E44E58;
+      color: #FFF1D0; }
+
+/* line 165, sass/_components.scss */
+.toggler {
+  display: none; }
+
+@media screen and (max-width: 25.875em) {
+  /* line 170, sass/_components.scss */
+  .toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: #E44E58; } }
+
+/* line 186, sass/_components.scss */
+.menu {
+  width: 100%;
+  background-color: #FFF1D0; }
+  /* line 190, sass/_components.scss */
+  .menu__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  /* line 196, sass/_components.scss */
+  .menu__link {
+    text-align: center;
+    flex: 0 0 20%;
+    display: inline-block;
+    text-decoration: none;
+    color: #1C2735;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+    transition: all .3s; }
+    /* line 208, sass/_components.scss */
+    .menu__link.active {
+      background-color: #E44E58; }
+    /* line 212, sass/_components.scss */
+    .menu__link:not(:last-child) {
+      border-right: 2px solid #1C2735; }
+    /* line 216, sass/_components.scss */
+    .menu__link:hover {
+      background-color: #E44E58; }
+  @media screen and (max-width: 25.875em) {
+    /* line 186, sass/_components.scss */
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(-10%);
+      z-index: 5;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s; }
+      /* line 232, sass/_components.scss */
+      .menu.show {
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible; }
+      /* line 238, sass/_components.scss */
+      .menu__nav {
+        flex-direction: column; }
+      /* line 242, sass/_components.scss */
+      .menu__link {
+        flex: 1;
+        padding: .5rem 0;
+        font-weight: 300;
+        font-size: 1.4rem;
+        letter-spacing: 0; }
+        /* line 249, sass/_components.scss */
+        .menu__link.active {
+          background-color: transparent;
+          color: #E44E58; }
+        /* line 254, sass/_components.scss */
+        .menu__link:not(:last-child) {
+          border-right: none; } }
+
+/* line 264, sass/_components.scss */
+.profile,
+.education,
+.skills,
+.experience {
+  padding: 4rem;
+  transition: all .3s; }
+
+/* line 273, sass/_components.scss */
+.education__major {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+/* line 279, sass/_components.scss */
+.education__uni {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(228, 78, 88, 0.8); }
+
+/* line 286, sass/_components.scss */
+.education__year {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(228, 78, 88, 0.7); }
+
+/* line 298, sass/_components.scss */
+.skills__row {
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 25.875em) {
+    /* line 298, sass/_components.scss */
+    .skills__row {
+      flex-wrap: wrap; } }
+
+/* line 307, sass/_components.scss */
+.skills ul {
+  margin-top: 2rem;
+  list-style: none; }
+
+/* line 313, sass/_components.scss */
+.skills li:not(:last-child) {
+  margin-bottom: 2rem; }
+
+/* line 322, sass/_components.scss */
+.experience__item:not(:last-child) {
+  border-bottom: 2px solid #31445E;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem; }
+
+/* line 329, sass/_components.scss */
+.experience__type {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+/* line 335, sass/_components.scss */
+.experience__company {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(228, 78, 88, 0.8); }
+
+/* line 342, sass/_components.scss */
+.experience__year {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(228, 78, 88, 0.7); }
